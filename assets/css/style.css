@@ -1,0 +1,629 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika&family=Inknut+Antiqua:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inika&family=Inknut+Antiqua:wght@300&family=Italianno&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inika", serif;
+	font-family: "Inknut Antiqua", serif;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4vh 2vw 0;
+}
+
+.nav h1 {
+	font-size: 1.6vw;
+	margin-left: 2vw;
+}
+
+.nav .menu {
+	display: flex;
+	z-index: 1;
+}
+
+.nav .menu li {
+	list-style: none;
+}
+
+.nav .menu li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.3vw;
+	margin: 2vw;
+	position: relative;
+}
+
+.nav .menu li a::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: #fff;
+	width: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 80%;
+	height: 3%;
+}
+
+.nav .menu li a:hover::after {
+	animation: width 1s linear forwards;
+}
+
+.nav i {
+	display: none;
+}
+
+.left {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.left img {
+	width: 30vw;
+	opacity: 0;
+	margin-right: 18vw;
+	z-index: 1;
+	margin-top: 6vh;
+	animation: fadeIn 1s ease forwards 0.8s;
+}
+
+.left .text {
+	color: #fff;
+
+	z-index: 1;
+	text-align: center;
+	font-size: 1.6vw;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
+
+.left .title {
+	font-family: "Inika", serif;
+	font-family: "Inknut Antiqua", serif;
+	font-family: "Italianno", cursive;
+	font-weight: 400;
+	font-size: 6vw;
+	margin: 0;
+	transform: translateY(-100%);
+	opacity: 0;
+	animation: flyInAbove 2s ease forwards;
+}
+
+.left .title:hover {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.left .sub_title {
+	font-size: 1.6vw;
+	margin: 0;
+	opacity: 0;
+	color: #eee;
+	transform: translateY(100%);
+}
+
+.left .first {
+	animation: flyInBottom 2s ease forwards 1s;
+}
+
+.left .second {
+	animation: flyInBottom 2s ease forwards 2s;
+}
+
+.right {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #302c42;
+	padding-top: 4%;
+}
+
+@keyframes width {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.right .text {
+	color: #fff;
+	margin-top: 20vh;
+	text-align: center;
+}
+
+.right .title {
+	font-family: "Inika", serif;
+	font-family: "Inknut Antiqua", serif;
+	font-family: "Italianno", cursive;
+	font-weight: 400;
+	font-size: 6vw;
+	margin: 0;
+	transform: translateY(-100%);
+	opacity: 0;
+	animation: flyInAbove 2s ease forwards;
+}
+
+.right .title:hover {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+@keyframes flyInAbove {
+	0% {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	100% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+}
+
+.right .sub_title {
+	font-size: 1.6vw;
+	margin: 0;
+	opacity: 0;
+	color: #eee;
+	transform: translateY(100%);
+}
+
+.right .first {
+	animation: flyInBottom 2s ease forwards 1s;
+}
+
+.right .second {
+	animation: flyInBottom 2s ease forwards 2s;
+}
+
+@keyframes flyInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.container {
+	opacity: 0;
+}
+
+/* == PORTFOLIO PAGE, ABOUT PAGE == */
+
+.portfolio_container,
+.about_container {
+	opacity: 0;
+	background-color: #302c42;
+}
+
+.fadeInPage {
+	animation: fadeInPage 0.5s ease forwards;
+}
+
+@keyframes fadeInPage {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* == PORTFOLIO PAGE == */
+.portfolio_container .nav h1,
+.about_container .nav h1 {
+	color: #fff;
+}
+
+.portfolio_content .text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+}
+
+.portfolio_content .text .title {
+	font-size: 2.4vw;
+	margin-top: 8vh;
+}
+
+.portfolio_content .text .subtitle {
+	color: #eee;
+	opacity: 0.6;
+	font-size: 1.4vw;
+}
+
+.portfolio_content .project {
+	display: flex;
+	margin: 8vh 0;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.portfolio_content .project .project_item {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	border-radius: 2%;
+}
+
+.portfolio_content .project_item img {
+	width: 20vw;
+	border-radius: 2%;
+	cursor: pointer;
+	filter: drop-shadow(0px 0px 0.3vw #aaa);
+}
+
+.portfolio_content .project_item .info {
+	position: absolute;
+	top: 90%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #0b0b0bde;
+	color: #fff;
+	border-radius: 2%;
+	text-align: center;
+	opacity: 1;
+	cursor: pointer;
+	overflow: hidden;
+	animation: slideDown 1s ease forwards;
+}
+
+.portfolio_content .project_item .info:hover {
+	filter: drop-shadow(0px 0px 3vw #8176af);
+
+	animation: slideTop 1s ease forwards;
+}
+.portfolio_content .project_item img:hover + .info {
+	filter: drop-shadow(0px 0px 3vw #8176af);
+
+	animation: slideTop 1s ease forwards;
+}
+
+@keyframes slideTop {
+	0% {
+		top: 100%;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		top: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 90%;
+	}
+}
+
+.portfolio_content .project_item .title {
+	font-size: 1.4vw;
+	text-decoration: dotted;
+	margin-bottom: 2vh;
+}
+
+.portfolio_content .project_item .text {
+	text-align: justify;
+	font-size: 1.1vw;
+	margin: 0 1.4vw;
+	line-height: 2.4;
+}
+
+.portfolio_content .project_item .desc {
+	text-align: justify;
+	margin: 0 2.4vw;
+	font-size: 1vw;
+}
+
+.portfolio_content .project_item .desc ul {
+	list-style: circle;
+}
+
+.portfolio_content .project_item .more {
+	display: none;
+}
+
+.modal {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.showModal {
+	display: flex;
+}
+
+.videoVertical {
+	width: 22vw;
+}
+
+.videoHorizontal {
+	width: 50vw;
+}
+
+.portfolio_content .project_item .trailer {
+	font-size: 1.4vw;
+	background-color: #8176af;
+	width: fit-content;
+	color: #fff;
+	padding: 0 2vw;
+	border-radius: 1vw;
+	margin: 8vh auto;
+}
+
+.portfolio_content .project_item .trailer:hover {
+	background-color: #fff;
+	color: #000;
+	filter: drop-shadow(0 0 0.5vw #fff);
+	transition: all 1s ease;
+}
+
+/* == ABOUT PAGE == */
+.about_content {
+	display: flex;
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 16vh;
+	justify-content: space-evenly;
+}
+
+.about_content .avatar {
+	display: inline-flex;
+	overflow: hidden;
+	border-radius: 1vw;
+}
+
+.about_content img {
+	width: 16vw;
+	height: 50vh;
+	border-radius: 1vw;
+	filter: drop-shadow(0 0 1vw #000);
+	cursor: pointer;
+}
+
+.about_content .avatar:hover {
+	filter: drop-shadow(0 0 2vw #fff);
+	transition: all 1s ease;
+}
+
+.about_content .avatar:hover > img {
+	transform: scale(1.2);
+	transition: all 1s ease;
+}
+
+.about_content .information p {
+	color: #fff;
+	font-size: 1.2vw;
+}
+
+.about_content .social {
+	margin-top: 6vh;
+}
+
+.about_content .social img {
+	width: 3vw;
+	height: 3vw;
+	margin-right: 1.2vw;
+	filter: drop-shadow(0 0 0.15vw #aaa);
+	cursor: pointer;
+}
+
+.about_content .social a {
+	text-decoration: none;
+}
+
+.about_content .social #facebook:hover {
+	filter: drop-shadow(0 0 1vw #517be9);
+	transition: all 1s ease;
+}
+
+.about_content .social #github:hover {
+	filter: drop-shadow(0 0 1vw #fff);
+	transition: all 1s ease;
+}
+
+.about_content .social #linkedin:hover {
+	filter: drop-shadow(0 0 1vw #3291c9);
+	transition: all 1s ease;
+}
+
+.about_content .social #youtube img {
+	margin-right: 0;
+}
+
+.about_content .social #youtube:hover {
+	filter: drop-shadow(0 0 1vw #cd1f1e);
+	transition: all 1s ease;
+}
+
+.about .skill_section {
+	color: #fff;
+	font-size: 2vw;
+	width: 90%;
+	margin: 12vh auto;
+}
+
+.about .skill_section > p {
+	margin-bottom: 4vh;
+}
+
+.lineVertical {
+	font-size: 2vw;
+	display: inline-block;
+	padding: 0 1vw;
+	margin-right: 1vw;
+}
+
+.about .skill_section .title {
+	font-size: 1.4vw;
+	display: inline-block;
+	padding: 0 1vw;
+	margin-right: 1vw;
+	cursor: pointer;
+	border: 0.15vw solid #8176af;
+	border-radius: 1vw;
+}
+
+.about .skill_section .title:hover {
+	filter: drop-shadow(0 0 1vw #fff);
+}
+
+.isActive {
+	background-color: #8176af;
+	border-radius: 1vw;
+	transition: all 1s ease;
+}
+
+.none {
+	display: none !important;
+}
+
+.about .skill_section img {
+	width: 3vw;
+	height: 3vw;
+	filter: grayscale(1);
+}
+
+.about .skill_section .name {
+	font-size: 1.2vw;
+	color: gray;
+}
+
+.about .skill_section .tech_tool_item {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 4vh;
+}
+
+.about .skill_section .item {
+	display: flex;
+	border: 0.15vw solid #fff;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vh 1vw;
+	width: 12vw;
+	border-radius: 12%;
+	cursor: pointer;
+	margin: 0 2vw;
+}
+
+.about .skill_section #java:hover {
+	background-color: #fff;
+	transition: all 1s ease;
+	filter: drop-shadow(0 0 1vw #fff);
+}
+
+.about .skill_section #java:hover > img,
+.about .skill_section #github:hover > img {
+	filter: grayscale(0);
+}
+
+.about .skill_section #java:hover > .name {
+	color: #0a7495;
+}
+
+.about .skill_section #html:hover {
+	background-color: #f16528;
+	transition: all 1s ease;
+	filter: drop-shadow(0 0 1vw #f16528);
+}
+
+.about .skill_section #html:hover > .name,
+.about .skill_section #css:hover > .name {
+	color: #fff;
+}
+
+.about .skill_section #css:hover {
+	background-color: #30aee8;
+	transition: all 1s ease;
+	filter: drop-shadow(0 0 1vw #30aee8);
+}
+
+.about .skill_section #js:hover {
+	background-color: #fbd601;
+	transition: all 1s ease;
+	filter: drop-shadow(0 0 1vw #fbd601);
+}
+
+.about .skill_section #js:hover > .name,
+.about .skill_section #github:hover > .name {
+	color: #000;
+}
+
+.about .skill_section #html:hover > img,
+.about .skill_section #css:hover > img,
+.about .skill_section #js:hover > img,
+.about .skill_section #git:hover > img {
+	filter: grayscale(0);
+	filter: drop-shadow(0px 0px 0.5vw #000);
+}
+
+.about .skill_section #git:hover,
+.about .skill_section #github:hover {
+	background-color: #fff;
+	transition: all 1s ease;
+	filter: drop-shadow(0 0 1vw #fff);
+}
+
+.about .skill_section #git:hover > .name {
+	color: #3f3000;
+}
+
+.about .skill_section #github p {
+	font-size: 1.2vw;
+}

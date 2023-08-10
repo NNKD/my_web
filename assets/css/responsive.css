@@ -1,0 +1,314 @@
+/* == TABLET AND MOBILE == */
+@media (max-width: 1024px) {
+	.right {
+		display: none;
+	}
+
+	.nav {
+		position: relative;
+		margin: 4vh 3vh;
+	}
+
+	.nav h1 {
+		font-size: 3vh;
+	}
+
+	.nav ul li a {
+		font-size: 3vh !important;
+	}
+
+	.nav .menu {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 1vh;
+		background-color: #302c42;
+		height: 36vh;
+		right: 1vh;
+		width: 26vh;
+		text-align: center;
+		z-index: 2;
+		border-radius: 1vh;
+		filter: drop-shadow(0px 0px 1vw #fff);
+	}
+
+	.showMenu {
+		display: block !important;
+	}
+
+	.hide {
+		display: none !important;
+	}
+
+	.nav .menu #close {
+		display: block;
+		position: absolute;
+		font-size: 4vh;
+		right: 0;
+		margin: 2vh;
+		color: #fff;
+	}
+
+	.nav .menu .first {
+		margin-top: 7vh;
+	}
+
+	.nav .menu .last {
+		margin-bottom: 6vh;
+	}
+
+	.nav i {
+		display: block;
+		font-size: 4vh;
+	}
+
+	.left {
+		flex-direction: column;
+	}
+
+	.left img {
+		width: 40vh;
+		margin: 4vh 0;
+	}
+
+	.left .text,
+	.left .sub_title {
+		color: #000;
+	}
+
+	.left .title {
+		font-size: 10vh;
+	}
+
+	.left .sub_title {
+		font-size: 3vh;
+	}
+
+	/* == PORTFOLIO PAGE AND ABOUT PAGE == */
+
+	.portfolio_container .nav i,
+	.about_container .nav i {
+		color: #fff;
+	}
+
+	/* == PORTFOLIO PAGE == */
+
+	.portfolio_content .text .title {
+		font-size: 4vh;
+		margin-top: 4vh;
+	}
+
+	.portfolio_content .text .subtitle {
+		font-size: 2.4vh;
+	}
+
+	.portfolio_content .project {
+		flex-direction: column;
+		width: 90%;
+		margin: 4vh auto;
+	}
+
+	.portfolio_content .project .project_item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		border-radius: 2%;
+		margin: 4vh 0;
+	}
+
+	.portfolio_content .project_item img {
+		width: 26vh;
+	}
+
+	.portfolio_content .project_item .more {
+		display: block;
+		color: #000;
+		position: absolute;
+		bottom: 0;
+		background-color: #ccc;
+		padding: 0 4vh;
+		border: 0.1vh solid #000;
+		filter: drop-shadow(0 0 1vh black);
+		z-index: 1;
+	}
+
+	.portfolio_content .project_item .info {
+		position: relative;
+		display: none;
+		transform: translateY(-4vh);
+		animation: slide 1s ease forwards !important;
+	}
+
+	@keyframes slide {
+		0% {
+			transform: translateY(-4vh);
+		}
+		100% {
+			transform: translateY(4vh);
+		}
+	}
+
+	.transImg {
+		transform: translateX(0) !important;
+		transition: all 1s ease;
+	}
+
+	.showInfo {
+		display: block !important;
+	}
+
+	.portfolio_content .project_item .title {
+		font-size: 2.4vh;
+	}
+
+	.portfolio_content .project_item .desc {
+		font-size: 1.8vh;
+		line-height: 2;
+		margin: 0 4vh;
+	}
+
+	.portfolio_content .project_item .trailer {
+		font-size: 2.4vh;
+		margin: 4vh auto;
+	}
+
+	.videoVertical {
+		width: 35vh;
+	}
+
+	.videoHorizontal {
+		width: 55vh;
+	}
+
+	/* == ABOUT PAGE == */
+	.about_content {
+		flex-direction: column;
+		margin-top: 8vh;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.about_content img {
+		width: 30vh;
+		height: auto;
+		margin-bottom: 8vh;
+	}
+
+	.about_content .information p {
+		font-size: 2vh;
+	}
+
+	.about_content .social img {
+		width: 5vh;
+		height: 5vh;
+		margin-right: 4vh;
+	}
+
+	.about .skill_section {
+		font-size: 3.4vh;
+		width: 90%;
+		margin: 4vh auto 10vh;
+	}
+
+	.about .skill_section .title {
+		font-size: 2vh;
+		padding: 0 2vw;
+		margin-right: 1vw;
+	}
+
+	.lineVertical {
+		font-size: 4vw;
+	}
+
+	.about .skill_section .tech_tool_item {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 4vh;
+		flex-wrap: wrap;
+	}
+
+	.about .skill_section .item {
+		padding: 2vh 6vw;
+		width: 24vh;
+		margin: 2vh;
+	}
+
+	.about .skill_section img {
+		width: 5vh;
+		height: 5vh;
+	}
+
+	.about .skill_section .name {
+		font-size: 2.4vh;
+	}
+
+	.about .skill_section #java,
+	.about .skill_section #git,
+	.about .skill_section #github {
+		background-color: #fff;
+		filter: drop-shadow(0 0 1vw #fff);
+	}
+
+	.about .skill_section #java img,
+	.about .skill_section #github img {
+		filter: grayscale(0);
+	}
+
+	.about .skill_section #java .name {
+		color: #0a7495;
+	}
+
+	.about .skill_section #html {
+		background-color: #f16528;
+		filter: drop-shadow(0 0 1vw #f16528);
+	}
+
+	.about .skill_section #html .name,
+	.about .skill_section #css .name {
+		color: #fff;
+	}
+
+	.about .skill_section #css {
+		background-color: #30aee8;
+		filter: drop-shadow(0 0 1vw #30aee8);
+	}
+
+	.about .skill_section #js {
+		background-color: #fbd601;
+		filter: drop-shadow(0 0 1vw #fbd601);
+	}
+
+	.about .skill_section #js .name,
+	.about .skill_section #github .name {
+		color: #000;
+	}
+
+	.about .skill_section #html img,
+	.about .skill_section #css img,
+	.about .skill_section #js img,
+	.about .skill_section #git img {
+		filter: grayscale(0);
+		filter: drop-shadow(0px 0px 0.5vw #000);
+	}
+
+	.about .skill_section #git:hover .name {
+		color: #3f3000;
+	}
+
+	.about .skill_section #github p {
+		font-size: 1.8vh;
+	}
+}
+
+/* == MOBILE == */
+@media (max-width: 740px) {
+	.videoVertical {
+		width: 35vh;
+	}
+
+	.videoHorizontal {
+		width: 40vh;
+	}
+}

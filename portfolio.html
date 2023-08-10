@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/responsive.css" />
+		<link
+			rel="shortcut icon"
+			href="assets/img/program.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Portfolio</title>
+	</head>
+	<body class="portfolio_container">
+		<div class="nav">
+			<h1>Duy Nguyen</h1>
+			<ul class="menu">
+				<i id="close" class="fa-solid fa-xmark"></i>
+				<li class="first">
+					<a href="#" onclick="changePageToHome()">Home</a>
+				</li>
+				<li>
+					<a href="#">Portfolio</a>
+				</li>
+				<li class="last">
+					<a href="#" onclick="changePageToAbout()">About</a>
+				</li>
+			</ul>
+			<i id="menuBar" class="fa-solid fa-bars"></i>
+		</div>
+
+		<div class="portfolio_content">
+			<div class="text">
+				<h1 class="title">Project</h1>
+				<p class="subtitle">Some project for you to explore</p>
+			</div>
+
+			<div class="project">
+				<div class="project_item">
+					<p class="more moreGame">More</p>
+					<img class="imgGame" src="./assets/img/game.png" alt="" />
+					<div class="info infoGame">
+						<p class="title">Game</p>
+						<div class="desc">
+							<ul>
+								<li><p>Skill: Java.</p></li>
+								<li>
+									<p>
+										Description: This is a simple rock-paper-scissors
+										game for the player playing with the computer.
+									</p>
+								</li>
+							</ul>
+
+							<p class="trailer" id="trailerGame">Video</p>
+						</div>
+					</div>
+				</div>
+				<div class="project_item">
+					<p class="more moreWeb">More</p>
+					<img class="imgWeb" src="./assets/img/web.png" alt="" />
+					<div class="info infoWeb">
+						<p class="title">Website</p>
+						<div class="desc">
+							<ul>
+								<li><p>Skill: Html, Css.</p></li>
+								<li>
+									<p>
+										Description: This is the website of the design
+										team about their information.
+									</p>
+								</li>
+							</ul>
+							<p class="trailer" id="trailerWeb">Video</p>
+						</div>
+					</div>
+				</div>
+				<div class="project_item">
+					<p class="more moreApp">More</p>
+					<img class="imgApp" src="./assets/img/app.png" alt="" />
+					<div class="info infoApp">
+						<p class="title">App</p>
+						<div class="desc">
+							<ul>
+								<li><p>Skill: Java.</p></li>
+								<li>
+									<p>
+										Description: This is a simple android application
+										for users to use to store content.
+									</p>
+								</li>
+							</ul>
+							<p class="trailer" id="trailerApp">Video</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal">
+				<video class="video" controls>
+					<source src="" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+		<script>
+			const portfolioContainer = document.querySelector(
+				".portfolio_container"
+			);
+
+			function autoFadeIn() {
+				portfolioContainer.classList.add("fadeInPage");
+			}
+
+			setInterval(autoFadeIn, 300);
+
+			var trailerGame = document.getElementById("trailerGame");
+			var trailerWeb = document.getElementById("trailerWeb");
+			var trailerApp = document.getElementById("trailerApp");
+			const modal = document.querySelector(".modal");
+			const video = document.querySelector(".video");
+
+			function showModalGame() {
+				modal.classList.add("showModal");
+				video.src = "./assets/video/game.mp4";
+				video.classList.add("videoVertical");
+				video.classList.remove("videoHorizontal");
+			}
+
+			function showModalWeb() {
+				modal.classList.add("showModal");
+				video.src = "./assets/video/web.mp4";
+				video.classList.remove("videoVertical");
+				video.classList.add("videoHorizontal");
+			}
+
+			function showModalApp() {
+				modal.classList.add("showModal");
+				video.src = "./assets/video/app.mp4";
+				video.classList.add("videoVertical");
+				video.classList.remove("videoHorizontal");
+			}
+
+			function hideModal() {
+				modal.classList.remove("showModal");
+			}
+
+			video.addEventListener("click", function (event) {
+				event.stopPropagation();
+			});
+
+			trailerGame.addEventListener("click", showModalGame);
+			trailerWeb.addEventListener("click", showModalWeb);
+			trailerApp.addEventListener("click", showModalApp);
+			modal.addEventListener("click", hideModal);
+
+			const moreGame = document.querySelector(".moreGame");
+			const moreWeb = document.querySelector(".moreWeb");
+			const moreApp = document.querySelector(".moreApp");
+			const infoGame = document.querySelector(".infoGame");
+			const infoWeb = document.querySelector(".infoWeb");
+			const infoApp = document.querySelector(".infoApp");
+			const imgGame = document.querySelector(".imgGame");
+			const imgWeb = document.querySelector(".imgWeb");
+			const imgApp = document.querySelector(".imgApp");
+
+			function showMoreInfoGame() {
+				infoGame.classList.add("showInfo");
+				imgGame.classList.add("transImg");
+				moreGame.classList.add("hide");
+
+				infoWeb.classList.remove("showInfo");
+				imgWeb.classList.remove("transImg");
+				moreWeb.classList.remove("hide");
+
+				infoApp.classList.remove("showInfo");
+				imgApp.classList.remove("transImg");
+				moreApp.classList.remove("hide");
+			}
+
+			function showMoreInfoWeb() {
+				infoWeb.classList.add("showInfo");
+				imgWeb.classList.add("transImg");
+				moreWeb.classList.add("hide");
+
+				infoGame.classList.remove("showInfo");
+				imgGame.classList.remove("transImg");
+				moreGame.classList.remove("hide");
+
+				infoApp.classList.remove("showInfo");
+				imgApp.classList.remove("transImg");
+				moreApp.classList.remove("hide");
+			}
+
+			function showMoreInfoApp() {
+				infoApp.classList.add("showInfo");
+				imgApp.classList.add("transImg");
+				moreApp.classList.add("hide");
+
+				infoGame.classList.remove("showInfo");
+				imgGame.classList.remove("transImg");
+				moreGame.classList.remove("hide");
+
+				infoWeb.classList.remove("showInfo");
+				imgWeb.classList.remove("transImg");
+				moreWeb.classList.remove("hide");
+			}
+
+			moreGame.addEventListener("click", showMoreInfoGame);
+			moreWeb.addEventListener("click", showMoreInfoWeb);
+			moreApp.addEventListener("click", showMoreInfoApp);
+		</script>
+	</body>
+</html>

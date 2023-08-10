@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/responsive.css" />
+		<link
+			rel="shortcut icon"
+			href="assets/img/program.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav">
+				<h1>Duy Nguyen</h1>
+				<ul class="menu">
+					<i id="close" class="fa-solid fa-xmark"></i>
+					<li class="first">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#" onclick="changePageToPortfolio()">Portfolio</a>
+					</li>
+					<li class="last">
+						<a href="#" onclick="changePageToAbout()">About</a>
+					</li>
+				</ul>
+				<i id="menuBar" class="fa-solid fa-bars"></i>
+			</div>
+
+			<div class="left">
+				<img src="./assets/img/picture.gif" alt="" />
+				<div class="text">
+					<h1 class="title">Hello!</h1>
+					<p class="sub_title first">I'm Duy</p>
+					<p class="sub_title second">Welcome to my website</p>
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+
+		<script src="./main.js"></script>
+		<script>
+			const container = document.querySelector(".container");
+
+			function autoFadeIn() {
+				container.classList.add("fadeInPage");
+			}
+
+			setInterval(autoFadeIn, 300);
+		</script>
+	</body>
+</html>
