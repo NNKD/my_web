@@ -29,8 +29,7 @@
 		text-align: center;
 		z-index: 2;
 		border-radius: 1vh;
-		/* filter: drop-shadow(0px 0px 1vw #fff); */
-		box-shadow: 0 0 2vw 1vw #fff;
+		box-shadow: 0 0 1.6vw 1vw #fff;
 	}
 
 	.showMenu {
