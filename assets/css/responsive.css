@@ -165,7 +165,7 @@
 	.portfolio_content .project_item .desc {
 		font-size: 1.8vh;
 		line-height: 2;
-		margin: 0 4vh;
+		padding: 0 4vh;
 	}
 
 	.portfolio_content .project_item .trailer {
